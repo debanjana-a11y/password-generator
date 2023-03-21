@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="dist/output.css">
+</head>
+<body class="h-screen bg-gradient-to-br from-slate-900 to-rose-900 flex justify-center items-center">
+    <container class="text-white flex flex-col gap-y-5 items-center">
+        <h1 class="text-3xl font-bold">Customize Your Password</h1>
+        <form class="flex flex-col items-center gap-y-5" action="">
+            <label class="text-xl" for="passwdlength">Passwork Length (between 1 and 10):</label>
+            <input class="w-1/5 p-2 text-black text-2xl" type="number" id="passwdlength" name="passwdlength" min="1" max="10" value=1>
+            <div class="flex gap-x-5 text-xl">
+                <div>
+                    <input type="checkbox" name="uppercase" id="uppercase">
+                    <label for="">Uppercase</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="lowercase" id="lowercase">
+                    <label for="lowercase">Lowercase</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="numbers" id="numbers">
+                    <label for="numbers">Number</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="symbols" id="symbols">
+                    <label for="symbols">Symbol</label>
+                </div>
+            </div>
+        </form>
+        <div class="w-full h-10 bg-white rounded-2xl flex items-center">
+            <div class="p-2 text-green-700 font-medium text-lg">sf3462</div>
+        </div>
+    </container>
+</body>
+</html>
