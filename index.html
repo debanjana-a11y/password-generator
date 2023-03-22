@@ -6,35 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password Generator</title>
     <link rel="stylesheet" href="dist/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
 </head>
 <body class="h-screen bg-gradient-to-br from-slate-900 to-rose-900 flex justify-center items-center">
-    <container class="text-white flex flex-col gap-y-5 items-center">
-        <h1 class="text-3xl font-bold">Customize Your Password</h1>
+    <container class="mx-5 text-white flex flex-col gap-y-10 items-center">
+        <h1 class="text-xl sm:text-3xl font-bold text-center">Customize Your Password</h1>
         <form class="flex flex-col items-center gap-y-5" action="">
-            <label class="text-xl" for="passwdlength">Passwork Length (between 1 and 10):</label>
-            <input class="w-1/5 p-2 text-black text-2xl" type="number" id="passwdlength" name="passwdlength" min="1" max="10" value=1>
-            <div class="flex gap-x-5 text-xl">
-                <div>
-                    <input type="checkbox" name="uppercase" id="uppercase">
+            <label class="sm:text-xl break-words" for="passwdlength">Passwork Length (between 1 and 10):</label>
+            <input class="w-1/5 p-2 text-black sm:text-2xl" type="number" id="passwdlength" name="passwdlength" min="1" max="10" value=10>
+            <div class="flex flex-col md:flex-row gap-x-10 gap-y-5 sm:text-xl">
+                <div class="flex items-center gap-x-2">
+                    <input class="w-6 h-6 accent-green-600" type="checkbox" name="uppercase" id="uppercase">
                     <label for="">Uppercase</label>
                 </div>
-                <div>
-                    <input type="checkbox" name="lowercase" id="lowercase">
+                <div class="flex items-center gap-x-2">
+                    <input class="w-6 h-6 accent-green-600" type="checkbox" name="lowercase" id="lowercase" checked>
                     <label for="lowercase">Lowercase</label>
                 </div>
-                <div>
-                    <input type="checkbox" name="numbers" id="numbers">
+                <div class="flex items-center gap-x-2">
+                    <input class="w-6 h-6 accent-green-600" type="checkbox" name="numbers" id="numbers">
                     <label for="numbers">Number</label>
                 </div>
-                <div>
-                    <input type="checkbox" name="symbols" id="symbols">
+                <div class="flex items-center gap-x-2">
+                    <input class="w-6 h-6 accent-green-600" type="checkbox" name="symbols" id="symbols">
                     <label for="symbols">Symbol</label>
                 </div>
             </div>
         </form>
-        <div class="w-full h-10 bg-white rounded-2xl flex items-center">
-            <div class="p-2 text-green-700 font-medium text-lg">sf3462</div>
-        </div>
+        <container class="mx-auto px-5 sm:w-full py-5 gap-y-5 sm:py-2 bg-black rounded-2xl flex flex-col sm:flex-row justify-between items-center">
+            <div class="text-green-700 sm:font-medium break-all sm:text-lg">jungkookie</div>
+            <div class="flex gap-x-5 sm:gap-x-2">
+                <i class="fa-regular fa-clipboard hover:cursor-pointer"></i>
+                <i class="fa-solid fa-arrows-rotate hover:cursor-pointer" style="color: #ffffff;"></i>
+            </div>
+        </container>
     </container>
 </body>
 </html>
