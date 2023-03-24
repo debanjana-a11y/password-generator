@@ -7,6 +7,7 @@
     <title>Password Generator</title>
     <link rel="stylesheet" href="dist/output.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <script src="script.js" defer></script>
 </head>
 <body class="h-screen bg-gradient-to-br from-slate-900 to-rose-900 flex justify-center items-center">
     <container class="mx-5 text-white flex flex-col gap-y-10 items-center">
@@ -34,7 +35,7 @@
             </div>
         </form>
         <container class="mx-auto px-5 sm:w-full py-5 gap-y-5 sm:py-2 bg-black rounded-2xl flex flex-col sm:flex-row justify-between items-center">
-            <div class="text-green-700 sm:font-medium break-all sm:text-lg">jungkookie</div>
+            <div class="text-green-700 sm:font-medium break-all sm:text-lg" id="passwordResult"></div>
             <div class="flex gap-x-5 sm:gap-x-2">
                 <i class="fa-regular fa-clipboard hover:cursor-pointer"></i>
                 <i class="fa-solid fa-arrows-rotate hover:cursor-pointer" style="color: #ffffff;"></i>
