@@ -24,7 +24,6 @@ const displayPassword = (passsword) => {
 const shuffle = (array) => {
     for (let index = 0; index < array.length; index++) {
         const randomIndex = Math.floor(Math.random() * array.length);
-        console.log(randomIndex);
         const temp = array[index];
         array[index] = array[randomIndex];
         array[randomIndex] = temp; 
@@ -96,7 +95,6 @@ function generatePassword() {
         passsword = array.join('');
     }
 
-    console.log(`Password generated = ${passsword}`);
     displayPassword(passsword);
 }
 
