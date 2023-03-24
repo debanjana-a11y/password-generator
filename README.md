@@ -1,5 +1,5 @@
 # password-generator
-RoadMap
+Plan of Action
 <ol>
   <li>Generate and change password according to the length and checked options </li>
   <li>Add copying password</li>
