@@ -10,7 +10,7 @@ const flagLC = document.getElementById('lowercase').checked;
 const flagNum = document.getElementById('numbers').checked;
 const flagSym = document.getElementById('symbols').checked;
 
-const passwordLen = document.getElementById('passwdlength').value;
+let passwordLen = document.getElementById('passwdlength').value;
 
 const getRandomChar = (array) => {
     const randomIndex = Math.floor(Math.random() * array.length);
@@ -94,6 +94,7 @@ function generatePassword() {
     }
 
     displayPassword(passsword);
+    console.log("len " + passwordLen + " password " + passsword);
 }
 
 function initEnv() {
@@ -101,7 +102,6 @@ function initEnv() {
     copyBtn.addEventListener('click', () => {
         const passsword = document.getElementById("passwordResult");
         navigator.clipboard.writeText(passsword.innerText).then(() => {
-            // alert(`Password copied : ${passsword.innerText}`);
             let message = document.getElementById("message");
             message.innerText = "Copied!";
             message.style.opacity = 1;
@@ -112,6 +112,13 @@ function initEnv() {
     resetBtn.addEventListener('click', () => {
         generatePassword();
         message.style.opacity = 0;
+    });
+
+    const pwdLen = document.getElementById('passwdlength');
+    pwdLen.addEventListener('change', () => {
+        document.getElementById('passwdlength').innerHTML = pwdLen.value;
+        passwordLen = pwdLen.value;
+        generatePassword();
     });
 }
 
