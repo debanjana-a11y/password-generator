@@ -31,11 +31,6 @@ const shuffle = (array) => {
     return array;
 };
 
-let mixed =  [];
-let passsword = '';
-let count = 0;
-
-
 // const generatePassword = (arr, passsword) => {
 //     mixed = [mixed, ...arr];
 //     passsword += getRandomChar(arr);
@@ -47,20 +42,10 @@ let count = 0;
 //     return false;
 // };
 
-function initEnv() {
-    const copyBtn = document.getElementById("copyPassword");
-    copyBtn.addEventListener('click', () => {
-        const passsword = document.getElementById("passwordResult");
-        navigator.clipboard.writeText(passsword.innerText).then(() => {
-            // alert(`Password copied : ${passsword.innerText}`);
-            let message = document.getElementById("message");
-            message.innerText = "Copied!";
-            message.style.opacity = 1;
-        });
-    });
-}
-
 function generatePassword() {
+    let mixed =  [];
+    let count = 0;
+    let passsword = '';
     if (flagUC === true) {
         mixed = (mixed.length > 0) ? [...mixed, ...uppercase] : [...uppercase];
         passsword += getRandomChar(uppercase);
@@ -109,6 +94,25 @@ function generatePassword() {
     }
 
     displayPassword(passsword);
+}
+
+function initEnv() {
+    const copyBtn = document.getElementById("copyPassword");
+    copyBtn.addEventListener('click', () => {
+        const passsword = document.getElementById("passwordResult");
+        navigator.clipboard.writeText(passsword.innerText).then(() => {
+            // alert(`Password copied : ${passsword.innerText}`);
+            let message = document.getElementById("message");
+            message.innerText = "Copied!";
+            message.style.opacity = 1;
+        });
+    });
+
+    const resetBtn = document.getElementById("resetPassword");
+    resetBtn.addEventListener('click', () => {
+        generatePassword();
+        message.style.opacity = 0;
+    });
 }
 
 initEnv();
