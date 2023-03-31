@@ -34,13 +34,16 @@
                 </div>
             </div>
         </form>
-        <container class="mx-auto px-5 sm:w-full py-5 gap-y-5 sm:py-2 bg-black rounded-2xl flex flex-col sm:flex-row justify-between items-center">
-            <div class="text-green-700 sm:font-medium break-all sm:text-lg" id="passwordResult"></div>
-            <div class="flex gap-x-5 sm:gap-x-2">
-                <i class="fa-regular fa-clipboard hover:cursor-pointer"></i>
-                <i class="fa-solid fa-arrows-rotate hover:cursor-pointer" style="color: #ffffff;"></i>
-            </div>
-        </container>
+        <div class="mx-auto sm:w-full gap-y-5 flex flex-col justify-between items-center">
+            <container class="mx-auto px-5 sm:w-full py-5 gap-y-5 sm:py-2 bg-black rounded-2xl flex flex-col sm:flex-row justify-between items-center">
+                <div class="text-green-700 sm:font-medium break-all sm:text-lg" id="passwordResult"></div>
+                <div class="flex gap-x-5 sm:gap-x-2">
+                    <i class="fa-regular fa-clipboard hover:cursor-pointer" id="copyPassword"></i>
+                    <i class="fa-solid fa-arrows-rotate hover:cursor-pointer" style="color: #ffffff;"></i>
+                </div>
+            </container>
+            <p class="opacity-0 text-green-200 text-sm sm:text-lg" id="message">lorem</p>
+        </div>
     </container>
 </body>
 </html>

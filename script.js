@@ -47,6 +47,19 @@ let count = 0;
 //     return false;
 // };
 
+function initEnv() {
+    const copyBtn = document.getElementById("copyPassword");
+    copyBtn.addEventListener('click', () => {
+        const passsword = document.getElementById("passwordResult");
+        navigator.clipboard.writeText(passsword.innerText).then(() => {
+            // alert(`Password copied : ${passsword.innerText}`);
+            let message = document.getElementById("message");
+            message.innerText = "Copied!";
+            message.style.opacity = 1;
+        });
+    });
+}
+
 function generatePassword() {
     if (flagUC === true) {
         mixed = (mixed.length > 0) ? [...mixed, ...uppercase] : [...uppercase];
@@ -98,6 +111,7 @@ function generatePassword() {
     displayPassword(passsword);
 }
 
+initEnv();
 generatePassword();
 
 
